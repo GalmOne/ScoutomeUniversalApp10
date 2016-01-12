@@ -1,0 +1,6 @@
+AlternateForm=UNPLATED
+Scale=200
+Scale=400
+TargetSize=24
+Language=FR-FR
+Language=EN-US
