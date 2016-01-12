@@ -23,16 +23,16 @@
         <TextBox x:Uid="TitreAjoutReunion" Text = "{ Binding Mylibelle, Mode = TwoWay }" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="21.333" Foreground="#FF223938" Grid.Row="0" Margin="68,6,14,6" Width="278" PlaceholderText="" ></TextBox>
 
 
-        <TextBlock x:Name="DateAjoutReunion" Text="{Binding MyDate, Mode = TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FF223938" Grid.Row="1" Margin="122,15,86,17" Width="152" Height="32"></TextBlock>
+        <TextBlock x:ConnectionId='1' x:Name="DateAjoutReunion" Text="{Binding MyDate, Mode = TwoWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" Foreground="#FF223938" Grid.Row="1" Margin="122,15,86,17" Width="152" Height="32"></TextBlock>
 
         <TextBox x:Uid="LieuAjoutReunion" Text = "{ Binding Mylieu, Mode = TwoWay }" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Grid.Row="2"  Width="245" Margin="68,16,47,16" PlaceholderText=""></TextBox>
 
         <TextBox x:Uid="PrixAjoutReunion" Text = "{ Binding Myprix, Mode = TwoWay }" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Grid.Row="3"  Width="116" PlaceholderText="" InputScope="Number" />
-        <TextBlock x:Name="devise" HorizontalAlignment="Center" Margin="160,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="€" VerticalAlignment="Center" FontSize="24" Width="28" Foreground="#FF223938"/>
-        <ListBox x:Name="AnimeListBox" Margin="25" Grid.Row="4">
+        <TextBlock x:ConnectionId='2' x:Name="devise" HorizontalAlignment="Center" Margin="160,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="€" VerticalAlignment="Center" FontSize="24" Width="28" Foreground="#FF223938"/>
+        <ListBox x:ConnectionId='3' x:Name="AnimeListBox" Margin="25" Grid.Row="4">
 
         </ListBox>
-        <ListView  ItemsSource="{ Binding MyAnimeListView, Mode=TwoWay}" SelectedItem="{Binding SelectedAnime, Mode =TwoWay}" x:Name="AnimeListView" Margin="25" Grid.Row="4" SelectionMode="Multiple" >
+        <ListView x:ConnectionId='4'  ItemsSource="{ Binding MyAnimeListView, Mode=TwoWay}" SelectedItem="{Binding SelectedAnime, Mode =TwoWay}" x:Name="AnimeListView" Margin="25" Grid.Row="4" SelectionMode="Multiple" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel>
@@ -44,7 +44,7 @@
         </ListView>
 
         <Button x:Uid="AddReunion" Content="" Command="{Binding AddReunionCommand}" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#330479EE" Height="50" Width="200" Grid.Row="5"/>
-        <Button x:Name="Retour" Command="{Binding BackCommand}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Height="54" RequestedTheme="Light" Margin="10,6,0,0">
+        <Button x:ConnectionId='5' x:Name="Retour" Command="{Binding BackCommand}" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="51" Height="54" RequestedTheme="Light" Margin="10,6,0,0">
             <Button.Background>
                 <ImageBrush Stretch="Fill" ImageSource="image/back.png"/>
             </Button.Background>
@@ -52,3 +52,4 @@
 
     </Grid>
 </Page>
+
